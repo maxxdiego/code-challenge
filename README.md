@@ -71,22 +71,20 @@ http://localhost:3000
 
 ## 📌 Como Usar
 
-### 1. Seleção de Arquivo
-- Navegue pela sidebar
-- Clique em qualquer arquivo .py
+- **Seleção de Arquivo**
+  - Navegue pela sidebar
+  - Clique em qualquer arquivo .py
 
-### 2. Resolução de Desafios
+- **Resolução de Desafios**
+  - Preencha os campos destacados
+  - Valide cada resposta com o botão ✓
 
-- Preencha os campos destacados
-- Valide cada resposta com o botão ✓
+- **Submissão Final**
+  - Complete todos os desafios
+  - Clique em "Submeter Código"
 
-### 3. Submissão Final
-
-- Complete todos os desafios
-- Clique em "Submeter Código"
-
-### 4. Reinício
-- Use o botão ↺ para novo desafio
+- **Reinício**
+  - Use o botão ↺ para novo desafio
 
 ## 🤝 Como Contribuir
 - Faça um fork do projeto
@@ -114,8 +112,12 @@ git push origin feature/incrivel
 - Distribuído sob licença MIT. Veja LICENSE para mais detalhes.
 
 ## ✉️ Contato
-Equipe de Desenvolvimento - dev@codechallenge.com
 
-Projeto no GitHub: https://github.com/seu-usuario/code-challenge
+Prof. Diego Max da Silva<br>
+https://lattes.cnpq.br/4370663836049458
+
+<hr>
+
+Projeto no GitHub: https://github.com/maxxdiego/code-challenge
 
 Desafie suas habilidades 💻 Domine o código-fonte 🚀 Aprimore suas competências 🔥
