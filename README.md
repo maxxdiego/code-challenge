@@ -2,17 +2,16 @@
 
 [![React](https://img.shields.io/badge/React-18.2.0-blue)](https://react.dev/)
 [![Next.js](https://img.shields.io/badge/Next.js-13.4.8-black)](https://nextjs.org/)
-[![Python](https://img.shields.io/badge/Python-3.11+-yellow)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 
-Uma aplicação interativa para testar conhecimentos em código-fonte de APIs Python/Flask através de desafios práticos.
+Uma aplicação interativa para testar conhecimentos em código-fonte de APIs, Sistemas Web, entre outros, através de desafios práticos.
 
 ![Screenshot da Aplicação](/public/screenshot.png) <!-- Adicione uma imagem real posteriormente -->
 
 ## 🎯 Objetivo
 
 Desenvolver habilidades de compreensão de código-fonte através de:
-- Identificação de padrões em código Python/Flask
+- Identificação de padrões em código
 - Preenchimento de trechos críticos
 - Validação em tempo real de respostas
 
@@ -29,7 +28,7 @@ Desenvolver habilidades de compreensão de código-fonte através de:
 
 - **Gerenciamento de Progresso**
   - Rastreamento de acertos/erros
-  - Sistema de conquistas (completo/incompleto)
+  - Sistema de conquistas (incompleto)
   - Multi-sessão independente por usuário
 
 - **Configuração Zero**
@@ -41,15 +40,14 @@ Desenvolver habilidades de compreensão de código-fonte através de:
 | Camada          | Tecnologias                                                                 |
 |-----------------|-----------------------------------------------------------------------------|
 | **Frontend**    | React 18, Next.js 13, TypeScript, Tailwind CSS, React Hooks                 |
-| **Backend**     | Python 3.11+, Flask, Flask-RESTful, PyMongo                                 |
-| **Ferramentas** | ESLint, Prettier, Next Router, Vercel Deployment                           |
-| **Padrões**     | REST, Clean Code, Componentes Reutilizáveis, Design System                  |
+| **Ferramentas** | ESLint, Prettier, Next Router, Vercel Deployment                            |
+| **Padrões**     | Clean Code, Componentes Reutilizáveis, Design System                        |
 
 ## 🚀 Instalação
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/code-challenge.git
+git clone https://github.com/maxxdiego/code-challenge.git
 ```
 
 2. Instale as dependências:
@@ -73,7 +71,7 @@ http://localhost:3000
 
 - **Seleção de Arquivo**
   - Navegue pela sidebar
-  - Clique em qualquer arquivo .py
+  - Clique em qualquer arquivo de código
 
 - **Resolução de Desafios**
   - Preencha os campos destacados
@@ -107,6 +105,9 @@ git push origin feature/incrivel
 ```
 
 - Abra um Pull Request
+
+## 👀 Observações:
+Atualmente, a aplicação opera com um protótipo funcional para análise de APIs Python/Flask. Nosso roadmap prevê a expansão para suporte multi-linguagem, permitindo a ingestão de qualquer código-fonte e geração automática de desafios personalizados.
 
 ## 📄 Licença
 - Distribuído sob licença MIT. Veja LICENSE para mais detalhes.
