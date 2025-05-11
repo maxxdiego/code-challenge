@@ -4,7 +4,7 @@
 [![Next.js](https://img.shields.io/badge/Next.js-13.4.8-black)](https://nextjs.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 
-Uma aplicação interativa para testar conhecimentos em código-fonte de APIs, Sistemas Web, entre outros, através de desafios práticos.
+Uma aplicação interativa de minha autoria, criada para testar conhecimentos em código-fonte de APIs, Sistemas Web, entre outros, através de desafios práticos.
 
 ![Screenshot da Aplicação](/public/screenshot.png) <!-- Adicione uma imagem real posteriormente -->
 
