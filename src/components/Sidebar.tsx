@@ -5,8 +5,12 @@ type SidebarProps = {
   onSelect: (file: string) => void;
 };
 
-function buildTree(paths: string[]) {
-  const root: any = {};
+type TreeNodeType = {
+  [key: string]: TreeNodeType | null;
+};
+
+function buildTree(paths: string[]): TreeNodeType {
+  const root: TreeNodeType = {};
 
   paths.forEach((path) => {
     const parts = path.split("/");
@@ -16,22 +20,20 @@ function buildTree(paths: string[]) {
       if (!current[part]) {
         current[part] = index === parts.length - 1 ? null : {};
       }
-      current = current[part];
+      current = current[part] as TreeNodeType;
     });
   });
 
   return root;
 }
 
-function TreeNode({
-  node,
-  path = "",
-  onSelect,
-}: {
-  node: any;
+interface TreeNodeProps {
+  node: TreeNodeType;
   path?: string;
   onSelect: (path: string) => void;
-}) {
+}
+
+function TreeNode({ node, path = "", onSelect }: TreeNodeProps) {
   return (
     <ul className="ml-4 space-y-4">
       {Object.entries(node).map(([name, child]) => {
