@@ -21,7 +21,7 @@ export default function Home() {
   const [maskedCode, setMaskedCode] = useState<Record<string, string[]>>({});
   const [totalInputs, setTotalInputs] = useState(0);
   const [solvedInputs, setSolvedInputs] = useState(0);
-  const [resetInputs, setResetInputs] = useState(false);
+  // const [resetInputs, setResetInputs] = useState(false);
 
   // Gera o código mascarado apenas no cliente
   const generateMaskedCode = useCallback((content: string) => {
