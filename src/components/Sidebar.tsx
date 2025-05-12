@@ -33,7 +33,7 @@ function TreeNode({
   onSelect: (path: string) => void;
 }) {
   return (
-    <ul className="ml-4 space-y-6">
+    <ul className="ml-4 space-y-4">
       {Object.entries(node).map(([name, child]) => {
         const currentPath = path ? `${path}/${name}` : name;
         const isFile = child === null;
@@ -43,7 +43,7 @@ function TreeNode({
             {isFile ? (
               <button
                 onClick={() => onSelect(currentPath)}
-                className="text-blue-400 hover:underline text-left cursor-pointer w-full flex items-center space-x-2"
+                className="text-gray-400 hover:underline text-left cursor-pointer w-full flex items-center space-x-2"
               >
                 <img
                   src="/images/python-ico.png"
@@ -54,7 +54,7 @@ function TreeNode({
               </button>
             ) : (
               <>
-                <div className="flex items-center space-x-2 text-white font-semibold mb-4">
+                <div className="flex items-center space-x-2 text-white font-medium mb-4">
                   <img
                     src="/images/folder-ico.png"
                     alt="Folder icon"
@@ -76,7 +76,7 @@ export default function Sidebar({ structure, onSelect }: SidebarProps) {
   const tree = buildTree(structure);
 
   return (
-    <div className="w-64 bg-gray-800 p-4 overflow-auto border-r border-gray-700 text-sm text-white">
+    <div className="w-64 bg-[#181928] p-4 overflow-auto border-r border-[#181928] text-sm text-white">
       <TreeNode node={tree} onSelect={onSelect} />
     </div>
   );

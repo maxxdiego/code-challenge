@@ -35,8 +35,7 @@ const fileContents: Record<string, string> = {
 
   // api/models/book_model.py
   "api/models/book_model.py": `from api import mongo
-    
-    
+
     class Book():
         def __init__(self, title, description, genre):
             self.title = title
@@ -51,7 +50,6 @@ const fileContents: Record<string, string> = {
     from ..schemas import book_schema
     from ..models import book_model
     from ..services import book_service
-    
     
     class BookList(Resource):
         def get(self):
@@ -74,7 +72,6 @@ const fileContents: Record<string, string> = {
                 result = book_service.add_book(new_book)
                 res = bk.jsonify(result)
                 return make_response(res, 201)
-    
     
     class BookDetail(Resource):
         def get(self, id):
@@ -108,8 +105,7 @@ const fileContents: Record<string, string> = {
                 return make_response(jsonify("Livro não encontrado."), 404)
             book_service.delete_book(id)
             return make_response(jsonify("Livro excluído com sucesso!"), 204)
-    
-    
+     
     api.add_resource(BookList, '/books')
     api.add_resource(BookDetail, '/books/<id>')
     `,
@@ -117,7 +113,6 @@ const fileContents: Record<string, string> = {
   // api/schemas/book_schema.py
   "api/schemas/book_schema.py": `from api import ma
     from marshmallow import Schema, fields
-    
     
     class BookSchema(ma.Schema):
         _id = fields.Str()
@@ -131,7 +126,6 @@ const fileContents: Record<string, string> = {
     from ..models import book_model
     from bson import ObjectId
     
-    
     def add_book(movie):
         mongo.db.books.insert_one({
             'title': movie.title,
@@ -139,16 +133,13 @@ const fileContents: Record<string, string> = {
             'genre': movie.genre
         })
     
-    
     @staticmethod
     def get_books():
         return list(mongo.db.books.find())
     
-    
     @staticmethod
     def get_book_by_id(id):
         return mongo.db.books.find_one({'_id': ObjectId(id)})
-    
     
     def update_book(self, id):
         mongo.db.books.update_one({'_id': ObjectId(id)},
@@ -159,7 +150,6 @@ const fileContents: Record<string, string> = {
                                        'genre': self.genre
                                    }
                                    })
-    
     
     @staticmethod
     def delete_book(id):
