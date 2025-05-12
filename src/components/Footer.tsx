@@ -3,13 +3,13 @@ import { useRouter } from "next/router";
 type FooterProps = {
   totalInputs: number;
   solvedInputs: number;
-  // onRestart: () => void;
+  onRestart: () => void;
 };
 
 export default function Footer({
   totalInputs,
   solvedInputs,
-  // onRestart,
+  onRestart,
 }: FooterProps) {
   const router = useRouter();
 
@@ -27,14 +27,14 @@ export default function Footer({
         Progresso: {solvedInputs}/{totalInputs}
       </span>
       <div className="flex gap-2">
-        {/* <button
+        <button
           onClick={() => {
             onRestart();
           }}
           className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-colors"
         >
           ⟳ Reiniciar
-        </button> */}
+        </button>
         <button
           onClick={handleSubmit}
           className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded cursor-pointer"

@@ -21,7 +21,7 @@ export default function Home() {
   const [maskedCode, setMaskedCode] = useState<Record<string, string[]>>({});
   const [totalInputs, setTotalInputs] = useState(0);
   const [solvedInputs, setSolvedInputs] = useState(0);
-  // const [resetInputs, setResetInputs] = useState(false);
+  const [resetInputs, setResetInputs] = useState(false);
 
   // Gera o código mascarado apenas no cliente
   const generateMaskedCode = useCallback((content: string) => {
@@ -75,31 +75,31 @@ export default function Home() {
     []
   );
 
-  // const handleRestart = useCallback(() => {
-  //   if (
-  //     window.confirm(
-  //       "Tem certeza que deseja reiniciar? Todo o progresso será perdido."
-  //     )
-  //   ) {
-  //     const newMaskedCode: Record<string, string[]> = {};
-  //     let total = 0;
+  const handleRestart = useCallback(() => {
+    if (
+      window.confirm(
+        "Tem certeza que deseja reiniciar? Todo o progresso será perdido."
+      )
+    ) {
+      const newMaskedCode: Record<string, string[]> = {};
+      let total = 0;
 
-  //     Object.keys(fileContents).forEach((file) => {
-  //       newMaskedCode[file] = generateMaskedCode(fileContents[file]);
-  //       newMaskedCode[file].forEach((line) => {
-  //         if (line.includes("__INPUT__")) {
-  //           total += (line.match(/__INPUT__/g) || []).length;
-  //         }
-  //       });
-  //     });
+      Object.keys(fileContents).forEach((file) => {
+        newMaskedCode[file] = generateMaskedCode(fileContents[file]);
+        newMaskedCode[file].forEach((line) => {
+          if (line.includes("__INPUT__")) {
+            total += (line.match(/__INPUT__/g) || []).length;
+          }
+        });
+      });
 
-  //     setMaskedCode(newMaskedCode);
-  //     setValidatedInputs({});
-  //     setTotalInputs(total);
-  //     setSolvedInputs(0);
-  //     setResetInputs((prev) => !prev); // Dispara a limpeza
-  //   }
-  // }, [generateMaskedCode]);
+      setMaskedCode(newMaskedCode);
+      setValidatedInputs({});
+      setTotalInputs(total);
+      setSolvedInputs(0);
+      setResetInputs((prev) => !prev); // Dispara a limpeza
+    }
+  }, [generateMaskedCode]);
 
   if (!isClient) {
     return (
@@ -124,7 +124,7 @@ export default function Home() {
               maskedCode={maskedCode[selectedFile]}
               validatedInputs={validatedInputs[selectedFile] || {}}
               onValidation={handleValidation}
-              // resetInputs={resetInputs} // Passa a flag de reset
+              resetInputs={resetInputs} // Passa a flag de reset
             />
           )}
         </main>
@@ -133,7 +133,7 @@ export default function Home() {
       <Footer
         totalInputs={totalInputs}
         solvedInputs={solvedInputs}
-        // onRestart={handleRestart}
+        onRestart={handleRestart}
       />
     </div>
   );
