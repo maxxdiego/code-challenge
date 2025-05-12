@@ -14,7 +14,6 @@ const CodeViewer = dynamic(() => import("@/components/CodeViewer"), {
 });
 
 export default function Home() {
-  const router = useRouter();
   const [isClient, setIsClient] = useState(false);
   const [selectedFile, setSelectedFile] = useState(fileStructure[0]);
   const [validatedInputs, setValidatedInputs] = useState<
