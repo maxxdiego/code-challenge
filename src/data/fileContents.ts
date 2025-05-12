@@ -77,14 +77,14 @@ const fileContents: Record<string, string> = {
         def get(self, id):
             book = book_service.get_book_by_id(id)
             if book is None:
-                return make_response(jsonify("Livro não foi encontrado"), 404)
+                return make_response(jsonify("Not found"), 404)
             bk = book_schema.BookSchema()
             return make_response(bk.jsonify(book), 200)
     
         def put(self, id):
             book_bd = book_service.get_book_by_id(id)
             if book_bd is None:
-                return make_response(jsonify("Livro não foi encontrado"), 404)
+                return make_response(jsonify("Not found"), 404)
             bk = book_schema.BookSchema()
             validate = bk.validate(request.json)
             if validate:
