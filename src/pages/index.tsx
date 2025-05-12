@@ -124,7 +124,7 @@ export default function Home() {
               maskedCode={maskedCode[selectedFile]}
               validatedInputs={validatedInputs[selectedFile] || {}}
               onValidation={handleValidation}
-              resetInputs={resetInputs} // Passa a flag de reset
+              // resetInputs={resetInputs} // Passa a flag de reset
             />
           )}
         </main>
