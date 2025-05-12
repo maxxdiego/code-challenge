@@ -27,7 +27,7 @@ export default function Footer({
         Progresso: {solvedInputs}/{totalInputs}
       </span>
       <div className="flex gap-2">
-        <button
+        <button hidden
           onClick={() => {
             onRestart();
           }}
