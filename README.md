@@ -6,7 +6,7 @@
 
 Uma aplicação interativa de minha autoria, criada para testar conhecimentos em código-fonte de APIs, Sistemas Web, entre outros, através de desafios práticos.
 
-![Screenshot da Aplicação](https://imagens-maxx.s3.sa-east-1.amazonaws.com/code-challenge.png) <!-- Adicione uma imagem real posteriormente -->
+![Screenshot da Aplicação](https://imagens-maxx.s3.sa-east-1.amazonaws.com/code-challenge-1.png) <!-- Adicione uma imagem real posteriormente -->
 
 ## 🎯 Objetivo
 
