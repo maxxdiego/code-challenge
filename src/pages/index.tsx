@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from "react";
-import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
