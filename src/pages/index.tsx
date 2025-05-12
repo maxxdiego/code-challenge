@@ -75,31 +75,31 @@ export default function Home() {
     []
   );
 
-  const handleRestart = useCallback(() => {
-    if (
-      window.confirm(
-        "Tem certeza que deseja reiniciar? Todo o progresso será perdido."
-      )
-    ) {
-      const newMaskedCode: Record<string, string[]> = {};
-      let total = 0;
+  // const handleRestart = useCallback(() => {
+  //   if (
+  //     window.confirm(
+  //       "Tem certeza que deseja reiniciar? Todo o progresso será perdido."
+  //     )
+  //   ) {
+  //     const newMaskedCode: Record<string, string[]> = {};
+  //     let total = 0;
 
-      Object.keys(fileContents).forEach((file) => {
-        newMaskedCode[file] = generateMaskedCode(fileContents[file]);
-        newMaskedCode[file].forEach((line) => {
-          if (line.includes("__INPUT__")) {
-            total += (line.match(/__INPUT__/g) || []).length;
-          }
-        });
-      });
+  //     Object.keys(fileContents).forEach((file) => {
+  //       newMaskedCode[file] = generateMaskedCode(fileContents[file]);
+  //       newMaskedCode[file].forEach((line) => {
+  //         if (line.includes("__INPUT__")) {
+  //           total += (line.match(/__INPUT__/g) || []).length;
+  //         }
+  //       });
+  //     });
 
-      setMaskedCode(newMaskedCode);
-      setValidatedInputs({});
-      setTotalInputs(total);
-      setSolvedInputs(0);
-      setResetInputs((prev) => !prev); // Dispara a limpeza
-    }
-  }, [generateMaskedCode]);
+  //     setMaskedCode(newMaskedCode);
+  //     setValidatedInputs({});
+  //     setTotalInputs(total);
+  //     setSolvedInputs(0);
+  //     setResetInputs((prev) => !prev); // Dispara a limpeza
+  //   }
+  // }, [generateMaskedCode]);
 
   if (!isClient) {
     return (
@@ -133,7 +133,7 @@ export default function Home() {
       <Footer
         totalInputs={totalInputs}
         solvedInputs={solvedInputs}
-        onRestart={handleRestart}
+        // onRestart={handleRestart}
       />
     </div>
   );

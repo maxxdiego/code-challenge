@@ -3,13 +3,13 @@ import { useRouter } from "next/router";
 type FooterProps = {
   totalInputs: number;
   solvedInputs: number;
-  onRestart: () => void;
+  // onRestart: () => void;
 };
 
 export default function Footer({
   totalInputs,
   solvedInputs,
-  onRestart,
+  // onRestart,
 }: FooterProps) {
   const router = useRouter();
 
