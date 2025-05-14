@@ -50,7 +50,7 @@ function TreeNode({ node, path = "", onSelect }: TreeNodeProps) {
                 <img
                   src="/images/python-ico.png"
                   alt="Python file"
-                  className="w-5"
+                  className="w-4"
                 />
                 <span>{name}</span>
               </button>

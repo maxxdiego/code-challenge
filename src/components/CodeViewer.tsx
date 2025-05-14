@@ -51,7 +51,7 @@ export default function CodeViewer({
         </div>
 
         {/* Conteúdo do código - ajuste o padding-left para corresponder à largura da numeração */}
-        <div className="pl-10 space-y-[0.4rem] scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
+        <div className="pl-10 space-y-[0.4rem] scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 text-[1rem]">
           {maskedCode.map((line, i) => (
             <div key={`code-${i}`} className="flex h-6 leading-6">
               <div className="whitespace-pre">
@@ -81,7 +81,7 @@ export default function CodeViewer({
                           spellCheck="false"
                         />
                         <button
-                          className="ml-2 text-green-600 hover:text-green-700 transition-colors cursor-pointer font-extrabold"
+                          className="ml-2 text-green-500 hover:text-green-700 hover:bg-gray-300 transition-colors cursor-pointer font-black bg-gray-800 border-green-700 rounded-sm w-7 text-lg"
                           onClick={() => handleValidation(inputKey, original)}
                           aria-label="Validar resposta"
                         >

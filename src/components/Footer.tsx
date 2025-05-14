@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Timer from "./Timer";
 
 type FooterProps = {
   totalInputs: number;
@@ -23,10 +24,11 @@ export default function Footer({
 
   return (
     <footer className="fixed bottom-0 left-0 right-0 bg-[#1E1E26] p-4 border-t border-gray-700 flex justify-between items-center">
-      <span className="text-white">
+      <span className="text-white font-bold text-lg">
         Progresso: {solvedInputs}/{totalInputs}
       </span>
       <div className="flex gap-2">
+        <Timer />
         <button hidden
           onClick={() => {
             onRestart();
@@ -37,9 +39,9 @@ export default function Footer({
         </button>
         <button
           onClick={handleSubmit}
-          className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
+          className="bg-green-600 hover:bg-green-700 text-white text-lg font-bold py-2 px-4 rounded cursor-pointer"
         >
-          ✓ Submeter código
+          Submeter código
         </button>
       </div>
     </footer>
