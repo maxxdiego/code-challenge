@@ -16,7 +16,7 @@ export default function Header() {
           </span>
         </h1>
         <h1 className="text-gray-400 font-mono text-md">
-          Fase: <span className="text-gray-200">API Rest com Node.js</span>
+          Fase: <span className="text-gray-200">API Rest com Flask / Python</span>
         </h1>
         <Link href="/winners"><span className="text-white text-lg"><span className="text-2xl">🏆</span> Vencedores</span></Link>
       </div>
