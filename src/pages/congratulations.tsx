@@ -22,7 +22,7 @@ export default function Congratulations() {
           ⟳ Jogar novamente!
         </button>
         <button
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/winners")}
           className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-lg cursor-pointer"
         >
           <span className="text-2xl">🏆</span> Vencedores do desafio

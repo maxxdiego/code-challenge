@@ -1,5 +1,11 @@
 import React from "react";
 
+interface TreeNodeProps {
+  node: TreeNodeType;
+  path?: string;
+  onSelect: (path: string) => void;
+}
+
 type SidebarProps = {
   structure: string[];
   onSelect: (file: string) => void;
@@ -27,15 +33,9 @@ function buildTree(paths: string[]): TreeNodeType {
   return root;
 }
 
-interface TreeNodeProps {
-  node: TreeNodeType;
-  path?: string;
-  onSelect: (path: string) => void;
-}
-
 function TreeNode({ node, path = "", onSelect }: TreeNodeProps) {
   return (
-    <ul className="ml-4 space-y-4">
+    <ul className="ml-4 space-y-4 text-xs sm:text-sm">
       {Object.entries(node).map(([name, child]) => {
         const currentPath = path ? `${path}/${name}` : name;
         const isFile = child === null;
@@ -78,7 +78,7 @@ export default function Sidebar({ structure, onSelect }: SidebarProps) {
   const tree = buildTree(structure);
 
   return (
-    <div className="w-64 bg-[#181928] p-4 overflow-auto border-r border-[#181928] text-sm text-white">
+    <div className="w-48 sm:w-64 bg-[#181928] p-2 sm:p-4 overflow-auto border-r border-[#181928] text-xs sm:text-sm text-white">
       <TreeNode node={tree} onSelect={onSelect} />
     </div>
   );
